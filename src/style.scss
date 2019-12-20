@@ -1,0 +1,17 @@
+$backgroud-color1: white;
+$backgroud-color2: red;
+$backgroud-color3: red;
+
+$text-color1: black;
+$text-color2: white;
+$text-color3: red;
+
+body {
+  background-color: $backgroud-color1;
+  color: $text-color1;
+}
+
+.app_error {
+  background-color: $backgroud-color2;
+  color: $text-color3;
+}
