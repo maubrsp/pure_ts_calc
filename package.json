@@ -1,9 +1,8 @@
 {
   "author": "Mau mau.brsp@gmail.com",
   "version": "0.0.1",
-  "bundleDependencies": false,
   "deprecated": false,
-  "description": "",
+  "description": "pure ts",
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.0",
     "cross-env": "^5.0.1",
@@ -45,7 +44,7 @@
     "server:prod": "cross-env NODE_ENV=production webpack-dev-server  --mode production --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress  --watch --open --content-base dist/",
     "start": "npm run server:dev",
     "test": "jest",
-    "test:w": "jest --watchAll"
+    "test:w": "jest --watchAll --json"
   },
   "jest": {
     "preset": "ts-jest"

@@ -1,3 +1,9 @@
+import {
+  State,
+  SimuleAntecipacaoInputs,
+  SimuleAntecipacaoOutputs
+} from "./State";
+
 export class Initialization {
   /**
    * initialize application
@@ -9,7 +15,9 @@ export class Initialization {
       if (!body) {
         throw new Error("dom body is undefined");
       }
-      return true;
+      const state = State.getInstance();
+      const init_result = await state.init();
+      return init_result;
     } catch (error) {
       return error;
     }
