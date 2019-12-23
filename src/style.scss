@@ -1,10 +1,23 @@
-$backgroud-color1: white;
-$backgroud-color2: red;
+/*
+
+0xf7f9fa
+
+#f5f7fa
+
+
+*/
+
+$backgroud-color1: #f7f9fa;
+$backgroud-color2: #f5f7fa;
 $backgroud-color3: red;
 
-$text-color1: black;
-$text-color2: white;
-$text-color3: red;
+$border-color1: #d1dce3;
+$border-color2: #dde6e9;
+$border-color3: #dde6e9;
+
+$text-color1: #656565;
+$text-color2: #3d75bb;
+$text-color3: #5d9cec;
 
 body {
   background-color: $backgroud-color1;
@@ -14,4 +27,14 @@ body {
 .app_error {
   background-color: $backgroud-color2;
   color: $text-color3;
+}
+
+.hidden {
+  display: none;
+}
+
+.simula_antecipacao {
+  &_container {
+    display: flex;
+  }
 }

@@ -7,7 +7,6 @@ describe("test suite for State", () => {
   const state = State.getInstance();
   it("valida singletone", () => {
     expect(state !== undefined).toBeTruthy();
-    //expect(new State()).toThrowError();
   });
   it("valida inicialização", async () => {
     const init = await state.init();

@@ -1,4 +1,4 @@
-interface SimuleAntecipacaoState {
+export interface SimuleAntecipacaoState {
   inputs: SimuleAntecipacaoInputs;
   outputs?: SimuleAntecipacaoOutputs;
 }
@@ -52,7 +52,7 @@ export class State {
           percentual: undefined
         }
       });
-      return true;
+      return this.simule_antecipacao_state;
     } catch (error) {
       return error;
     }
@@ -76,11 +76,20 @@ export class State {
       if (this.inputsIsValid(inputs) === true) {
         outputs = this.calculateAntecipacao(inputs, outputs);
       }
+      // else {
+      //   return null;
+      // }
       this.simule_antecipacao_state = { inputs, outputs };
       return this.simule_antecipacao_state;
     } catch (error) {
       return error;
     }
+  }
+
+  public async getSimuleAntecipacaoState(): Promise<SimuleAntecipacaoState> {
+    return new Promise((resolve, reject) => {
+      resolve(this.simule_antecipacao_state);
+    });
   }
 
   /**
